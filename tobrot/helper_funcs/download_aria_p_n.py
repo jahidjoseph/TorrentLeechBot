@@ -291,7 +291,7 @@ async def call_apropriate_function(
                     local_file_name = key_f_res_se
                     message_id = final_response[key_f_res_se]
                     channel_id = str(sent_message_to_update_tg_p.chat.id)[4:]
-                    private_link = f"https://t.me/c/{channel_id}/{message_id}"
+                    private_link = f"https://t.me/jahidcloud/{message_id}"
                     message_to_send += "👉 <a href='"
                     message_to_send += private_link
                     message_to_send += "'>"
@@ -309,7 +309,7 @@ async def call_apropriate_function(
                 msg = await user_message.reply_text(
                     text=message_to_send, quote=True, disable_web_page_preview=True
                 )
-                await credit.edit_text(f"😊 Successfully Leeched [here](https://t.me/c/{channel_id}/{msg.message_id}).",
+                await credit.edit_text(f"😊 Successfully Leeched [here](https://t.me/jahidcloud/{msg.message_id}).",
                                        disable_web_page_preview=True)
             except Exception as go:
                 LOGGER.error(go)
